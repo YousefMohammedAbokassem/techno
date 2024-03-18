@@ -8,7 +8,7 @@ const Product = async({ info, image ,lng}) => {
       <div className="image ">
         <Image src={image} width={250} height={250} alt="no image" />
       </div>
-      <div className="info text-center text-lg md:text-xl lg:text-2xl ">{t(info)}</div>
+      <div className="info text-center text-base md:text-lg lg:text-xl ">{t(info)}</div>
     </div>
   );
 };

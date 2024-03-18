@@ -97,7 +97,7 @@ export default function Nav({ lng }) {
           >
             <a
               href="#"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full capita"
+              className=" text-base  capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full capita"
             >
               {t("home")}
             </a>
@@ -111,7 +111,7 @@ export default function Nav({ lng }) {
           >
             <a
               href="#services"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
+              className=" text-base  capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
             >
               {" "}
               {t("services")}
@@ -126,7 +126,7 @@ export default function Nav({ lng }) {
           >
             <a
               href="#media"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
+              className=" text-base  capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
             >
               {t("media")}
             </a>
@@ -140,7 +140,7 @@ export default function Nav({ lng }) {
           >
             <a
               href="#motion"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
+              className=" text-base  capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
             >
               {t("motion")}{" "}
             </a>
@@ -154,12 +154,12 @@ export default function Nav({ lng }) {
           >
             <a
               href="#ui"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
+              className=" text-base   capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
             >
               {t("ui")}
             </a>
           </li>
-          <li
+          {/* <li
             onClick={(e) => {
               tapWidth(e);
               setOpacity((prev) => !prev);
@@ -168,11 +168,11 @@ export default function Nav({ lng }) {
           >
             <a
               href="#Languages"
-              className="text-2xl capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
+              className=" text-base  capitalize py-2 px-4 hover:text-[#00BBFF]  block h-full"
             >
               {t("languages")}
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <span className="block lg:hidden">
