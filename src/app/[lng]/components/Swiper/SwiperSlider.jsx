@@ -43,23 +43,28 @@ export default function App({ images }) {
       >
         {images?.map((item, i) => {
           return (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={i}>
               {item.image_url === undefined ? (
                 ""
               ) : (
-                <Image
-                  src={`http://192.168.155.4:8002${item.image_url}`}
-                  // src={`/1.png`}
-                  width={450}
-                  height={450}
-                  alt="no image"
-                />
+                <a
+                  href={`back.portfolio.technoplus.dev${item.image_url}`}
+                  className=" cursor-grab"
+                >
+                  <Image
+                    src={`back.portfolio.technoplus.dev${item.image_url}`}
+                    // src={`/1.png`}
+                    width={450}
+                    height={450}
+                    alt="no image"
+                  />
+                </a>
               )}
             </SwiperSlide>
           );
         })}
       </Swiper>
-      <div className="swiper-button-next bg-white rounded-full w-[50px] h-[50px] top-1/2  ">
+      <div className="swiper-button-next bg-white rounded-full w-[30px] h-[30px] top-1/2  ">
         <Image
           src="/Group-20.png"
           alt=""
@@ -68,7 +73,7 @@ export default function App({ images }) {
           className="w-[95%] h-[95%] translate-x-[-16%]"
         />
       </div>
-      <div className="swiper-button-prev bg-white rounded-full w-[50px] h-[50px] top-1/2  ">
+      <div className="swiper-button-prev bg-white rounded-full w-[30px] h-[30px] top-1/2  ">
         <Image
           src="/Group-13.png"
           alt=""

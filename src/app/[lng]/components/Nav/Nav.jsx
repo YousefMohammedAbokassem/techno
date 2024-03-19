@@ -65,7 +65,13 @@ export default function Nav({ lng }) {
   return (
     <nav className="nav flex items-center justify-between py-5 px-8  container mx-auto ">
       <div className="logo h-full flex items-center justify-center">
-        <Image src="/logoSmall.png" width={150} height={50} alt="logo" className="w-[80px] h-[30px] md:w-[150px] md:h-[40px]" />
+        <Image
+          src="/logoSmall2.png"
+          width={150}
+          height={50}
+          alt="logo"
+          className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
+        />
       </div>
       <div
         className={`flex justify-center items-center z-50 ulParent backdrop-blur-lg transition ${

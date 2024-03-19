@@ -13,7 +13,7 @@ export default function Footer() {
         className="w-[90px] md:w-[120px] h-8 md:h-10 lg:w-auto"
       />
       <div className="info capitalize text-[10px] lg:text-base">
-        <sup>@</sup>
+        <sup>©</sup>
         {year.getFullYear()}{" "}
         <span className="text-[#00BBFF]">Techno Plus </span>All rights reserved
       </div>
@@ -22,20 +22,20 @@ export default function Footer() {
         dir="ltr"
       >
         <a
-          href="#"
+          href="https://wa.me/963993454955"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
           <Image
-            src="/Group-43.png"
+            src="/whats.png"
             alt=""
             width={25}
             height={25}
             className="w-[15px] h-[15px] md:w-6 md:h-6"
           />
-          <span className="text-start">+99999999999999</span>
+          <span className="text-start">+963&nbsp;993&nbsp;454&nbsp;955</span>
         </a>
-        <a
-          href="#"
+        {/* <a
+          href="https://technopluss.dev/"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
           <Image
@@ -45,10 +45,10 @@ export default function Footer() {
             height={25}
             className="w-[15px] h-[15px] md:w-6 md:h-6"
           />
-          <span className="text-end">technopluss</span>
-        </a>
+          <span className="text-end">technopluss.dev</span>
+        </a> */}
         <a
-          href="#"
+          href="https://technopluss.dev/"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
           <Image
@@ -59,6 +59,35 @@ export default function Footer() {
             className="w-[15px] h-[15px] md:w-6 md:h-6"
           />
           <span className="text-start">technoplus.dev</span>
+        </a>
+      </div>
+      <div className="flex justify-center items-center gap-4">
+        <a href="https://www.instagram.com/technoplus.dev?igsh=ZWh3MGlxZGFtbWE=">
+          <Image
+            src="/instagram.png"
+            alt=""
+            width={25}
+            height={25}
+            className="w-[15px] h-[15px] md:w-6 md:h-6"
+          />
+        </a>
+        <a href="https://www.linkedin.com/company/technopluss/">
+          <Image
+            src="/Group-46.png"
+            alt=""
+            width={25}
+            height={25}
+            className="w-[15px] h-[15px] md:w-6 md:h-6"
+          />
+        </a>
+        <a href="https://www.facebook.com/technoplus.dev?mibextid=ZbWKwL">
+          <Image
+            src="/facebook.png"
+            alt=""
+            width={25}
+            height={25}
+            className="w-[15px] h-[15px] md:w-6 md:h-6"
+          />
         </a>
       </div>
     </footer>

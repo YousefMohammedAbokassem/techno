@@ -34,7 +34,7 @@ import axios from "axios";
 // ];
 export default async function Motion() {
   const fetchData = await axios.get(
-    `http://192.168.155.4:8002/api/user/videos`
+    `back.portfolio.technoplus.dev/api/user/videos`
   );
   // console.log(fetchData.data.designs);
   let images = fetchData.data.videos;

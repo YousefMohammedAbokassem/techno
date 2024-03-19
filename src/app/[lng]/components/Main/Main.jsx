@@ -20,7 +20,7 @@ const Main = ({ lng }) => {
     return (
       <div className="mx-auto flex flex-col items-center justify-center relative left-[50%] top-6 -translate-x-1/2 w-full">
         <div
-          className="w-[90%] sm:w-[300px] md:w-[350px] lg:w-[400px] relative h-[200px]"
+          className="w-[74%] sm:w-[300px] md:w-[350px] lg:w-[400px] relative h-[200px]"
           style={
             {
               // width: "100%",

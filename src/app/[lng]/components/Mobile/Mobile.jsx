@@ -18,21 +18,16 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { Pagination, Navigation, EffectCards } from "swiper/modules";
+import LottieSwip from "./LottieSwip";
 
 export default function Mobile({ lng }) {
+  const [activeSlideIndex, setActiveSlideIndex] = useState(null);
   const { t } = useTranslation(lng);
-  const [data, setData] = useState([
-    {
-      name: "taha",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde voluptatem in sed facere laudantium deleniti assumenda fuga id nulla",
-      main_image: "/motion-graphic-01.png",
-    },
-  ]);
+  const [data, setData] = useState([]);
   const [images, setImages] = useState([]);
   const [popup, setPopup] = useState(false);
   const fetchData = async () => {
-    const res = await axios.get(`http://192.168.155.4:8002/api/user/apps`);
+    const res = await axios.get(`back.portfolio.technoplus.dev/api/user/apps`);
     setData(res.data.apps);
   };
 
@@ -63,13 +58,13 @@ export default function Mobile({ lng }) {
           return (
             <SwiperSlide className="w-full" key={item.id}>
               <div className="info flex lg:flex-row flex-col items-center justify-around gap-6 lg:p-0 p-5">
-                <div className="image h-[350px] lg:h-[450px]">
+                <div className="image h-[400px] lg:h-[450px]">
                   {item.main_image === undefined ? (
                     ""
                   ) : (
                     //#########################################
                     // <img
-                    //   // src={`http://192.168.155.4:8002${item.main_image}`}
+                    //   // src={`back.portfolio.technoplus.dev${item.main_image}`}
                     //   src={`${item.main_image}`}
                     //   className="w-full h-full"
                     //   width={450}
@@ -81,24 +76,32 @@ export default function Mobile({ lng }) {
                         effect={"cards"}
                         grabCursor={true}
                         modules={[EffectCards]}
-                        className="mySwiperCards"
+                        className="mySwiperCards relative"
                         cardsEffect={{
                           slideShadows: false,
                         }}
+                        onSlideChange={(swiper) =>
+                          setActiveSlideIndex(swiper.activeIndex)
+                        }
                       >
-                        <SwiperSlide>
-                          <Image
-                            width={450}
-                            height={450}
-                            src={`http://192.168.155.4:8002${item.main_image}`}
-                            alt=""
-                          />
-                        </SwiperSlide>
+                        {activeSlideIndex === null ? <LottieSwip /> : ""}
+                        {item?.images?.map((image) => {
+                          return (
+                            <SwiperSlide key={image.id}>
+                              <Image
+                                width={450}
+                                height={450}
+                                src={`back.portfolio.technoplus.dev${image.image_url}`}
+                                alt=""
+                              />
+                            </SwiperSlide>
+                          );
+                        })}
                       </Swiper>
                     </>
                   )}
                 </div>
-                <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3">
+                <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[80px] lg:mt-0">
                   <h2 className="text-3xl md:text-2xl font-semibold">
                     {item.name}
                   </h2>
@@ -130,7 +133,7 @@ export default function Mobile({ lng }) {
           );
         })}
       </Swiper>
-      {popup && (
+      {/* {popup && (
         <div className="z-10 overflow-hidden swiperMobile fixed left-0 top-0 h-screen w-full">
           <div className="relative container mx-auto">
             <SwiperComp images={images} />
@@ -142,7 +145,7 @@ export default function Mobile({ lng }) {
             </span>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

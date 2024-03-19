@@ -34,7 +34,7 @@ import axios from "axios";
 export default async function Social() {
    process.env.NEXTAUTH_URL
   const fetchData = await axios.get(
-    `http://192.168.155.4:8002/api/user/socialMedia`
+    `back.portfolio.technoplus.dev/api/user/socialMedia`
   );
   // console.log(fetchData.data);
   let images = fetchData.data.designs;

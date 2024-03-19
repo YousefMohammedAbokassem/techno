@@ -29,10 +29,10 @@ export default async function Page({ params: { lng } }) {
       <div className="  relative">
         <Services lng={lng} />
         {/* done */}
-        {/* <Social lng={lng} />
-        <Motion lng={lng} /> */}
+        <Social lng={lng} />
+        <Motion lng={lng} />
         {/* done */}
-        {/* <Mobile lng={lng} /> */}
+        <Mobile lng={lng} />
         <Footer lng={lng} />
       </div>
       <Up />
