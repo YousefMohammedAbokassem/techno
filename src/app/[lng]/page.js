@@ -6,11 +6,12 @@ import Services from "./components/Services/Services";
 import SwiperComp from "./components/Swiper/SwiperSlider";
 import Social from "./components/Social/Social";
 import Motion from "./components/Motion/Motion";
-import Mobile from "./components/Mobile/Mobile";
+// import Mobile from "./components/Mobile/Mobile";
 import Footer from "./components/Foot/Footer";
 import Main from "./components/Main/Main";
 import Nav from "./components/Nav/Nav";
 import Up from "./components/Up/Up";
+import Mobile from "./components/Mobile/Mobile";
 // import { Main } from "next/document";
 // import Carousel from "./components/Carousel";
 export async function generateMetadata({ params: { lng } }) {

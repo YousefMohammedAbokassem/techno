@@ -15,7 +15,7 @@ const Main = ({ lng }) => {
       renderer: "svg",
     },
   };
-  if (typeof window !== "undefined") {
+  if (typeof window != undefined) {
     // الكود الذي يستخدم كائن document يمكن وضعه هنا
     return (
       <div className="mx-auto flex flex-col items-center justify-center relative left-[50%] top-6 -translate-x-1/2 w-full">

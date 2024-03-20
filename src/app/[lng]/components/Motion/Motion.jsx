@@ -2,37 +2,7 @@ import React from "react";
 import SwiperCompVideos from "../Swiper/SwiperCompVideos";
 import HeadSec from "../HeadSec/HeadSec";
 import axios from "axios";
-
-// const images = [
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-//   {
-//     image: "/2.png",
-//   },
-// ];
-export default async function Motion() {
+export default async function Motion({ lng }) {
   const fetchData = await axios.get(
     `${process.env.NEXT_PUBLIC_API_URL}/user/videos`
   );
@@ -43,7 +13,7 @@ export default async function Motion() {
       className="py-12 relative z-10 overflow-hidden container mx-auto"
       id="motion"
     >
-      <HeadSec info={"graphic"} />
+      <HeadSec info={"graphic"} lng={lng} />
       <SwiperCompVideos images={images} />
     </div>
   );
