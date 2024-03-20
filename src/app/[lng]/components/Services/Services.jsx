@@ -27,7 +27,7 @@ const Services = ({ lng }) => {
         ].map((ele, i) => {
           return (
             <React.Fragment key={i}>
-              <a href={`#${ele.href}`}>
+              <a href={`#${ele.href}`} className=" font-bold">
                 <Product info={ele.info} image={ele.image} lng={lng} />
               </a>
             </React.Fragment>
