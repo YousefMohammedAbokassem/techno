@@ -24,7 +24,7 @@ export default async function Page({ params: { lng } }) {
   const { t } = await useTranslation(lng);
 
   return (
-    <div className="">
+    <div className="pb-16 md:pb-0">
       <Nav lng={lng} />
       <Main lng={lng} />
       <div className="  relative">

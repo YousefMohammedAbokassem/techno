@@ -269,7 +269,7 @@ body {
     .languages {
       top: 40px;
       left: 50%;
-      background: #0154a3;
+      background: #3a34ff54;
       pointer-events: none;
       transition: 0.5s;
       transform: translateX(-50%);
@@ -279,10 +279,9 @@ body {
       pointer-events: none;
       //onopenandclose
       &.active {
-        height: 66px;
+        height: auto;
         pointer-events: all;
         transform: translateX(-50%);
-        pointer-events: all;
       }
       > li {
         &:not(:last-child) {
@@ -381,4 +380,7 @@ body {
 }
 .toRight {
   margin-right: 15px !important;
+}
+.rotateHand {
+  transform:rotateY(180deg) translateY(25px)
 }

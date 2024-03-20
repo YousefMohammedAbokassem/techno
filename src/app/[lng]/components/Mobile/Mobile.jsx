@@ -108,7 +108,11 @@ export default function Mobile({ lng }) {
                               </SwiperSlide>
                             );
                           })}
-                          <div className="lottieSwip">
+                          <div
+                            className={`lottieSwip ${
+                              lng === "ar" ? "rotateHand" : ""
+                            }`}
+                          >
                             <Lottie
                               options={defaultOptions}
                               isClickToPauseDisabled={true}
