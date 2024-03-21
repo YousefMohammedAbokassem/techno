@@ -4,7 +4,10 @@ import HeadSec from "../HeadSec/HeadSec";
 import axios from "axios";
 export default async function Motion({ lng }) {
   const fetchData = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/user/videos`
+    `${process.env.NEXT_PUBLIC_API_URL}/user/videos`,
+    {
+      cache: "no-store",
+    }
   );
   // console.log(fetchData.data.designs);
   let images = fetchData.data.videos;

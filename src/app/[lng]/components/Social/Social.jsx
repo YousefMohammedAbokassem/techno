@@ -3,10 +3,13 @@ import SwiperComp from "../Swiper/SwiperSlider";
 import HeadSec from "../HeadSec/HeadSec";
 import axios from "axios";
 
-export default async function Social({lng}) {
+export default async function Social({ lng }) {
   //  process.env.NEXT_PUBLIC_API_URL;
   const fetchData = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/user/socialMedia`
+    `${process.env.NEXT_PUBLIC_API_URL}/user/socialMedia`,
+    {
+      cache: "no-store",
+    }
   );
   // console.log(fetchData.data);
   let images = fetchData.data.designs;
