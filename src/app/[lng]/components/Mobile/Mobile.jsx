@@ -108,20 +108,23 @@ export default function Mobile({ lng }) {
                               </SwiperSlide>
                             );
                           })}
-                          <div
-                            className={`lottieSwip ${
-                              lng === "ar" ? "rotateHand" : ""
-                            }`}
-                          >
-                            <Lottie
-                              options={defaultOptions}
-                              isClickToPauseDisabled={true}
-                            />
-                          </div>
 
                           {/* {typeof window != undefined ? <LottieSwip /> : ""} */}
                           {/* <LottieSwip /> */}
-                          {/* {activeSlideIndex === null ? <LottieSwip /> : ""} */}
+                          {activeSlideIndex === null ? (
+                            <div
+                              className={`lottieSwip ${
+                                lng === "ar" ? "rotateHand" : ""
+                              }`}
+                            >
+                              <Lottie
+                                options={defaultOptions}
+                                isClickToPauseDisabled={true}
+                              />
+                            </div>
+                          ) : (
+                            ""
+                          )}
                         </Swiper>
                       </>
                     </div>
