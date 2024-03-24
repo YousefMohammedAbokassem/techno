@@ -23,7 +23,7 @@ export default async function Social({ lng }) {
   let images = fetchData?.designs;
   return (
     <div
-      className="py-12 relative z-10 overflow-hidden container mx-auto"
+      className="pt-12 relative z-10 overflow-hidden container mx-auto"
       id="media"
     >
       <HeadSec info={"social"} lng={lng} />

@@ -52,7 +52,7 @@ export default function Mobile({ lng }) {
   if (typeof window != undefined) {
     return (
       <div
-        className={`mobile py-12 relative  overflow-hidden container mx-auto  ${
+        className={`mobile pt-12 relative  overflow-hidden container mx-auto  ${
           popup ? "z-[1000000000]" : ""
         }`}
         id="ui"

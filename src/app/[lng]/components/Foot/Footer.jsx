@@ -6,7 +6,7 @@ export default async function Footer({ lng }) {
   const { t } = await useTranslation(lng);
   const year = new Date();
   return (
-    <footer className="py-12 flex justify-center gap-5 items-center h-[70px] flex-col md:flex-row">
+    <footer className="pb-12 pt-24  md:pt-12 flex justify-center gap-5 items-center h-[70px] flex-col md:flex-row">
       <Image
         width={125}
         height={25}

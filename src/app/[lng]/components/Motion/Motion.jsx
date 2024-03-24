@@ -13,7 +13,7 @@ export default async function Motion({ lng }) {
   let images = fetchData?.videos;
   return (
     <div
-      className="py-12 relative z-10 overflow-hidden container mx-auto"
+      className="pt-12 relative z-10 overflow-hidden container mx-auto"
       id="motion"
     >
       <HeadSec info={"graphic"} lng={lng} />
