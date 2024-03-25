@@ -160,8 +160,8 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 450px !important;
-  height: 450px !important;
+  width: 460px !important;
+  height: 460px !important;
   // width: 450px !important;
   // height: 450px !important;
   @media (max-width: 991px) {
@@ -172,10 +172,10 @@ body {
     width: 250px !important;
     height: 250px !important;
   }
-  @media (max-width: 500px) {
-    width: 200px !important;
-    height: 200px !important;
-  }
+  // @media (max-width: 500px) {
+  //   width: 200px !important;
+  //   height: 200px !important;
+  // }
 }
 
 .swiper-slide img {
@@ -345,7 +345,7 @@ body {
 // cards
 
 .mySwiperCards {
-  width: 450px !important;
+  width: 460px !important;
   height: 400px;
   padding: 25px !important;
   &::before {
