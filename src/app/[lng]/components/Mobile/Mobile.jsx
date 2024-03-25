@@ -1,6 +1,9 @@
 "use client";
+const isServer = typeof window === "undefined";
+const lottie = !isServer ? require("react-lottie") : null;
+const Lottie = lottie?.default;
 import React, { useEffect, useState, useRef } from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import animationData from "./swip.json";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +21,7 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { Pagination, Navigation, EffectCards } from "swiper/modules";
-import LottieSwip from "./LottieSwip";
+
 import { useTranslation } from "@/app/i18n/client";
 
 export default function Mobile({ lng }) {
@@ -49,69 +52,69 @@ export default function Mobile({ lng }) {
       renderer: "svg",
     },
   };
-  if (typeof window != undefined) {
-    return (
-      <div
-        className={`mobile pt-12 relative  overflow-hidden container mx-auto  ${
-          popup ? "z-[1000000000]" : ""
-        }`}
-        id="ui"
-      >
-        <HeadSec info={"uiUx"} lng={lng} />
 
-        <div className="m-[25px]">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            // navigation={true}
-            navigation={navigationOptions}
-            modules={[Pagination, Navigation]}
-            className="fullSlider"
-          >
-            {/* ############################################# */}
-            {data?.map((item, i) => {
-              return (
-                <SwiperSlide className="w-full" key={i}>
-                  <div className="info flex lg:flex-row flex-col items-center justify-around gap-6 lg:p-0 p-5">
-                    <div className="image h-[400px] lg:h-[450px]">
-                      <>
-                        <Swiper
-                          effect={"cards"}
-                          grabCursor={true}
-                          modules={[EffectCards]}
-                          nested={true}
-                          className="mySwiperCards relative"
-                          cardsEffect={{
-                            slideShadows: false,
-                          }}
-                          onSlideChange={(swiper) =>
-                            setActiveSlideIndex(swiper.activeIndex)
-                          }
-                        >
-                          {item?.images?.map((image, j) => {
-                            return (
-                              <SwiperSlide key={j}>
-                                {image.image_url === undefined ? (
-                                  ""
-                                ) : (
-                                  <Image
-                                    width={450}
-                                    height={450}
-                                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${image.image_url}`}
-                                    alt=""
-                                  />
-                                )}
-                              </SwiperSlide>
-                            );
-                          })}
+  return (
+    <div
+      className={`mobile pt-12 relative  overflow-hidden container mx-auto  ${
+        popup ? "z-[1000000000]" : ""
+      }`}
+      id="ui"
+    >
+      <HeadSec info={"uiUx"} lng={lng} />
+      <div className="m-[25px]">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          // navigation={true}
+          navigation={navigationOptions}
+          modules={[Pagination, Navigation]}
+          className="fullSlider"
+        >
+          {/* ############################################# */}
+          {data?.map((item, i) => {
+            return (
+              <SwiperSlide className="w-full" key={i}>
+                <div className="info flex lg:flex-row flex-col items-center justify-around gap-6 lg:p-0 p-5">
+                  <div className="image h-[400px] lg:h-[450px]">
+                    <>
+                      <Swiper
+                        effect={"cards"}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                        nested={true}
+                        className="mySwiperCards relative"
+                        cardsEffect={{
+                          slideShadows: false,
+                        }}
+                        onSlideChange={(swiper) =>
+                          setActiveSlideIndex(swiper.activeIndex)
+                        }
+                      >
+                        {item?.images?.map((image, j) => {
+                          return (
+                            <SwiperSlide key={j}>
+                              {image.image_url === undefined ? (
+                                ""
+                              ) : (
+                                <Image
+                                  width={450}
+                                  height={450}
+                                  src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${image.image_url}`}
+                                  alt=""
+                                />
+                              )}
+                            </SwiperSlide>
+                          );
+                        })}
 
-                          {/* {typeof window != undefined ? <LottieSwip /> : ""} */}
-                          {/* <LottieSwip /> */}
-                          {activeSlideIndex === null ? (
+                        {/* {typeof window != undefined ? <LottieSwip /> : ""} */}
+                        {/* <LottieSwip /> */}
+                        {!isServer ? (
+                          activeSlideIndex === null ? (
                             <div
                               className={`lottieSwip ${
                                 lng === "ar" ? "rotateHand" : ""
@@ -124,20 +127,23 @@ export default function Mobile({ lng }) {
                             </div>
                           ) : (
                             ""
-                          )}
-                        </Swiper>
-                      </>
-                    </div>
-                    <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[80px] lg:mt-0">
-                      <h2 className="text-3xl md:text-2xl font-semibold">
-                        {item.name}
-                      </h2>
+                          )
+                        ) : (
+                          ""
+                        )}
+                      </Swiper>
+                    </>
+                  </div>
+                  <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[80px] lg:mt-0">
+                    <h2 className="text-3xl md:text-2xl font-semibold">
+                      {item.name}
+                    </h2>
 
-                      <p className="lg:text-2xl text-lg leading-8">
-                        {item.description}
-                      </p>
-                      {/* <Link href="ViewMobile"> */}
-                      {/* <button
+                    <p className="lg:text-2xl text-lg leading-8">
+                      {item.description}
+                    </p>
+                    {/* <Link href="ViewMobile"> */}
+                    {/* <button
                     type="button"
                     className="text-[#0090FF] bg-white px-3 py-1 cursor-pointer rounded-full font-semibold"
                     onClick={() => {
@@ -153,33 +159,33 @@ export default function Mobile({ lng }) {
                   >
                     {t("view")}
                   </button> */}
-                      {/* </Link> */}
-                    </div>
+                    {/* </Link> */}
                   </div>
-                </SwiperSlide>
-              );
-            })}
-            {/* ############################################# */}
-            <div className="swiper-button-next bg-white rounded-full w-[30px] h-[30px] top-1/2 toRight">
-              <Image
-                src="/Group-20.png"
-                alt=""
-                width={75}
-                height={75}
-                className="w-[95%] h-[95%] translate-x-[-16%]"
-              />
-            </div>
-            <div className="swiper-button-prev bg-white rounded-full w-[30px] h-[30px] top-1/2  toLeft">
-              <Image
-                src="/Group-13.png"
-                alt=""
-                width={75}
-                height={75}
-                className="w-[95%] h-[95%] translate-x-[16%]"
-              />
-            </div>
-          </Swiper>
-          {/* {popup && (
+                </div>
+              </SwiperSlide>
+            );
+          })}
+          {/* ############################################# */}
+          <div className="swiper-button-next bg-white rounded-full w-[30px] h-[30px] top-1/2 toRight">
+            <Image
+              src="/Group-20.png"
+              alt=""
+              width={75}
+              height={75}
+              className="w-[95%] h-[95%] translate-x-[-16%]"
+            />
+          </div>
+          <div className="swiper-button-prev bg-white rounded-full w-[30px] h-[30px] top-1/2  toLeft">
+            <Image
+              src="/Group-13.png"
+              alt=""
+              width={75}
+              height={75}
+              className="w-[95%] h-[95%] translate-x-[16%]"
+            />
+          </div>
+        </Swiper>
+        {/* {popup && (
         <div className="z-10 overflow-hidden swiperMobile fixed left-0 top-0 h-screen w-full">
           <div className="relative container mx-auto">
             <SwiperComp images={images} />
@@ -192,8 +198,7 @@ export default function Mobile({ lng }) {
           </div>
         </div>
       )} */}
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
