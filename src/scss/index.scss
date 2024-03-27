@@ -326,19 +326,26 @@ body {
   background-size: cover;
 }
 .swiper-button-next,
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-prev-video,
+.swiper-button-next-video,
+.swiper-button-next-mobile,
+.swiper-button-prev-mobile {
   width: 30px !important;
   height: 30px !important;
   border-radius: 50% !important;
   transform: translateY(-50%);
+  display: grid !important;
   &::after {
     content: "" !important;
   }
 }
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-prev-mobile {
   transform: translateX(-69%);
 }
-.swiper-button-next {
+.swiper-button-next,
+.swiper-button-next-mobile {
   transform: translateX(69%);
 }
 
@@ -350,6 +357,7 @@ body {
   padding: 25px !important;
   &::before {
     background: transparent;
+    border: none !important;
   }
   .swiper-slide {
     display: flex;
@@ -361,6 +369,9 @@ body {
     color: #fff;
     width: 400px !important;
     height: 400px !important;
+    > div {
+      height: 100%;
+    }
     img {
       object-fit: contain;
     }
@@ -400,4 +411,18 @@ body {
 }
 .rotateHand {
   transform: rotateY(180deg) translateY(25px);
+}
+.anchorImageSkeleton {
+  > div {
+    background-color: transparent;
+    height: 100%;
+  }
+  div {
+    &::before {
+      opacity: 0.05 !important;
+    }
+    &::after {
+      background-color: #01002430 !important;
+    }
+  }
 }

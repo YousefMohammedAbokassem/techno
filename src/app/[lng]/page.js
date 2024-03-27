@@ -16,7 +16,7 @@ import Mobile from "./components/Mobile/Mobile";
 // import Carousel from "./components/Carousel";
 export async function generateMetadata({ params: { lng } }) {
   const { t } = await useTranslation(lng);
-  return { title: t("portfolio") };
+  return { title: "Techno Plus" };
 }
 
 export default async function Page({ params: { lng } }) {

@@ -1,7 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslation } from "@/app/i18n";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 export default async function Footer({ lng }) {
   const { t } = await useTranslation(lng);
   const year = new Date();
@@ -28,56 +35,26 @@ export default async function Footer({ lng }) {
           href="https://wa.me/963993454955"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
-          <Image
-            src="/whats.png"
-            alt=""
-            width={25}
-            height={25}
-            className="w-[15px] h-[15px] md:w-6 md:h-6"
-          />
+          <FontAwesomeIcon icon={faWhatsapp} />
           <span className="text-start">+963&nbsp;993&nbsp;454&nbsp;955</span>
         </a>
         <a
           href="https://technopluss.dev/"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
-          <Image
-            src="/Group-48.png"
-            alt=""
-            width={25}
-            height={25}
-            className="w-[15px] h-[15px] md:w-6 md:h-6"
-          />
+          <FontAwesomeIcon icon={faGlobe} />
           <span className="text-start">technoplus.dev</span>
         </a>
       </div>
       <div className="flex justify-center items-center gap-4">
         <a href="https://www.facebook.com/technoplus.dev?mibextid=ZbWKwL">
-          <Image
-            src="/facebook.png"
-            alt=""
-            width={25}
-            height={25}
-            className="w-[15px] h-[15px] md:w-6 md:h-6"
-          />
+          <FontAwesomeIcon icon={faFacebookF} style={{ color: "#ffffff" }} />
         </a>
         <a href="https://www.instagram.com/technoplus.dev?igsh=ZWh3MGlxZGFtbWE=">
-          <Image
-            src="/instagram.png"
-            alt=""
-            width={25}
-            height={25}
-            className="w-[15px] h-[15px] md:w-6 md:h-6"
-          />
+          <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a href="https://www.linkedin.com/company/technopluss/">
-          <Image
-            src="/Group-46.png"
-            alt=""
-            width={25}
-            height={25}
-            className="w-[15px] h-[15px] md:w-6 md:h-6"
-          />
+          <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
       </div>
     </footer>

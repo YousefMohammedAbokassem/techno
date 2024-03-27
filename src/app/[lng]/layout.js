@@ -3,8 +3,9 @@ import "@/scss/index.scss";
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 import Design from "./components/Design/Design";
-import { useTranslation } from "../i18n"; 
+import { useTranslation } from "../i18n";
 import { Tajawal } from "next/font/google";
+import { Providers } from "./components/Provider/Provider";
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
@@ -27,8 +28,10 @@ export default function RootLayout({ children, params: { lng } }) {
     <html lang={lng} dir={dir(lng)}>
       <head />
       <body className={`${tajawal.className}`}>
-        <Design />
-        {children}
+        <Providers>
+          {children}
+          <Design />
+        </Providers>
       </body>
     </html>
   );

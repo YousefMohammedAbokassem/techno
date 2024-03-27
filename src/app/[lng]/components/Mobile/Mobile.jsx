@@ -6,7 +6,8 @@ import React, { useEffect, useState, useRef } from "react";
 // import Lottie from "react-lottie";
 import animationData from "./swip.json";
 import Link from "next/link";
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
+
 import HeadSec from "../HeadSec/HeadSec";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,8 +40,8 @@ export default function Mobile({ lng }) {
     fetchData();
   }, []);
   const navigationOptions = {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next.mobileSwiper",
+    prevEl: ".swiper-button-prev.mobileSwiper",
   };
   // console.log(data?.map((item) => console.log(item.id)));
   const defaultOptions = {
@@ -97,16 +98,14 @@ export default function Mobile({ lng }) {
                         {item?.images?.map((image, j) => {
                           return (
                             <SwiperSlide key={j}>
-                              {image.image_url === undefined ? (
-                                ""
-                              ) : (
+                              <div className="anchorImageSkeleton">
                                 <Image
                                   width={450}
                                   height={450}
                                   src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${image.image_url}`}
                                   alt=""
                                 />
-                              )}
+                              </div>
                             </SwiperSlide>
                           );
                         })}
@@ -166,7 +165,7 @@ export default function Mobile({ lng }) {
             );
           })}
           {/* ############################################# */}
-          <div className="swiper-button-next bg-white rounded-full w-[30px] h-[30px] top-1/2 toRight">
+          <div className="  swiper-button-next mobileSwiper bg-white rounded-full w-[30px] h-[30px] top-1/2 toRight">
             <Image
               src="/Group-20.png"
               alt=""
@@ -175,7 +174,7 @@ export default function Mobile({ lng }) {
               className="w-[95%] h-[95%] translate-x-[-16%]"
             />
           </div>
-          <div className="swiper-button-prev bg-white rounded-full w-[30px] h-[30px] top-1/2  toLeft">
+          <div className=" swiper-button-prev mobileSwiper bg-white rounded-full w-[30px] h-[30px] top-1/2  toLeft">
             <Image
               src="/Group-13.png"
               alt=""

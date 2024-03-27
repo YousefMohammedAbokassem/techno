@@ -4,9 +4,9 @@ import Product from "./Product";
 
 const Services = ({ lng }) => {
   return (
-    <div className="pt-12 container mx-auto services" id="services">
+    <div className="pt-12 container mx-auto services " id="services">
       <HeadSec info={"services"} lng={lng} />
-      <div className="my-8 social">
+      <div className="my-8 social z-10 relative">
         {[
           {
             info: "social",
