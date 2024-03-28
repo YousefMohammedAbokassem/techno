@@ -18,9 +18,57 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params: { lng } }) {
   const { t } = await useTranslation(lng);
   return {
+    openGraph: {
+      title: "Techno Plus",
+      description: "The React Framework for the Web",
+      url: "https://nextjs.org",
+      siteName: "Next.js",
+      images: [
+        {
+          url: "https://nextjs.org/og.png", // Must be an absolute URL
+          width: 800,
+          height: 600,
+        },
+        {
+          url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
+          width: 1800,
+          height: 1600,
+          alt: "My custom alt",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+
     icons: {
       icon: "/logo.png",
     },
+
+    description: "The React Framework for the Web",
+    generator: "Techno Plus",
+    applicationName: "Techno Plus Portfolio",
+    authors: [
+      { name: "Techno Plus" },
+      { name: "Techno Plus", url: "https://nextjs.org" },
+    ],
+    keywords: [
+      "Mobile Application",
+      "web Application",
+      "web design",
+      "ui ux design",
+      "portfolio",
+      "flutter",
+      "next.js",
+      "react.js",
+      "photoshop",
+      "adobe.xd",
+      "javascript",
+      "gallery",
+      "animation",
+      "graphic designer",
+    ],
+    creator: "Techno Plus",
+    publisher: "Techno Plus",
   };
 }
 export default function RootLayout({ children, params: { lng } }) {
