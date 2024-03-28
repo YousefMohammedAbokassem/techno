@@ -57,7 +57,7 @@ export default function App() {
         slidesPerView={"auto"}
         spaceBetween={75}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{

@@ -129,12 +129,8 @@ export default function Mobile({ lng }) {
                         <Swiper
                           effect={"cards"}
                           grabCursor={true}
-                          modules={[EffectCards, Autoplay]}
+                          modules={[EffectCards]}
                           nested={true}
-                          autoplay={{
-                            delay: 1500,
-                            disableOnInteraction: false,
-                          }}
                           className="mySwiperCards relative"
                           cardsEffect={{
                             slideShadows: false,
