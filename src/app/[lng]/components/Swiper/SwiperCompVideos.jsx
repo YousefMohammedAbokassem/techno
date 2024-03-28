@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
@@ -69,7 +70,7 @@ export default function App() {
         }}
         pagination={true}
         loop={true}
-        modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         {loading ? (
@@ -108,6 +109,7 @@ export default function App() {
                     <Image
                       src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.video_image}`}
                       // src={`/1.png`}
+                      className="rounded-xl"
                       width={450}
                       height={450}
                       alt="no image"
