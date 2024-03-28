@@ -39,7 +39,7 @@ export default async function Footer({ lng }) {
           <span className="text-start">+963&nbsp;993&nbsp;454&nbsp;955</span>
         </a>
         <a
-          href="https://technopluss.dev/"
+          href="https://technoplus.dev/"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
           <FontAwesomeIcon icon={faGlobe} />
