@@ -14,8 +14,13 @@ import "swiper/css/navigation";
 // import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
-import { Navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Autoplay,
+  Navigation,
+} from "swiper/modules";
+// import { Navigation } from "swiper/modules";
 export default function App() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -50,6 +55,11 @@ export default function App() {
         centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={75}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         coverflowEffect={{
           rotate: 15,
           stretch: 0,
@@ -58,8 +68,8 @@ export default function App() {
           slideShadows: false,
         }}
         pagination={true}
-        loop={true}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        // loop={true}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         {loading ? (
