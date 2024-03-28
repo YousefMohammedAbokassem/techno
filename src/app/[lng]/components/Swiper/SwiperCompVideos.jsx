@@ -98,32 +98,28 @@ export default function App() {
           videos?.map((item, i) => {
             return (
               <SwiperSlide key={i}>
-                {item.video_image === undefined ? (
-                  ""
-                ) : (
-                  <a
-                    href={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.video_url}`}
-                    className=" cursor-grab anchorImageSkeleton"
-                    target="_blank"
-                  >
-                    <Image
-                      src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.video_image}`}
-                      // src={`/1.png`}
-                      className="rounded-xl"
-                      width={450}
-                      height={450}
-                      alt="no image"
-                    />
-                    <Image
-                      src={`/polygon.png`}
-                      // src={`/1.png`}
-                      width={100}
-                      height={100}
-                      alt="no image"
-                      className="videoIcon absolute left-1/2 top-1/2"
-                    />
-                  </a>
-                )}
+                <a
+                  href={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.video_url}`}
+                  className=" cursor-grab anchorImageSkeleton"
+                  target="_blank"
+                >
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.video_image}`}
+                    // src={`/1.png`}
+                    className="rounded-xl"
+                    width={450}
+                    height={450}
+                    alt="no image"
+                  />
+                  <Image
+                    src={`/polygon.png`}
+                    // src={`/1.png`}
+                    width={100}
+                    height={100}
+                    alt="no image"
+                    className="videoIcon absolute left-1/2 top-1/2"
+                  />
+                </a>
               </SwiperSlide>
             );
           })

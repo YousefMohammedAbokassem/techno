@@ -123,7 +123,7 @@ export default function Mobile({ lng }) {
             data?.map((item, i) => {
               return (
                 <SwiperSlide className="w-full" key={i}>
-                  <div className="info flex lg:flex-row flex-col items-center justify-around gap-6 lg:p-0 p-5">
+                  <div className="info flex lg:flex-row-reverse flex-col items-center justify-around gap-6 lg:p-0 p-5">
                     <div className="image h-[400px] lg:h-[450px]">
                       <>
                         <Swiper
@@ -177,7 +177,7 @@ export default function Mobile({ lng }) {
                         </Swiper>
                       </>
                     </div>
-                    <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[80px] lg:mt-0">
+                    <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[30px] lg:mt-0">
                       <h2 className="text-3xl md:text-2xl font-semibold">
                         {item.name}
                       </h2>
