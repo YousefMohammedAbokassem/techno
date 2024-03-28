@@ -92,7 +92,7 @@ export default function Mobile({ lng }) {
           {/* ############################################# */}
           {loading ? (
             <div>
-              <div className="info flex lg:flex-row flex-col items-center justify-around gap-6 lg:p-0 p-5">
+              <div className="info flex lg:flex-row-reverse flex-col items-center justify-around gap-6 lg:p-0 p-5">
                 <div className="image h-[400px] lg:h-[450px] w-96 bg-[#66666730] animate-pulse"></div>
                 <div className="flex flex-col items-center justify-between text-center gap-5 lg:gap-9 lg:w-1/2 w-full md:p-5 lg:p-0 p-3 mt-[80px] lg:mt-0">
                   <h2 className="text-3xl md:text-2xl font-semibold h-7 animate-pulse bg-[#66666730] w-1/2"></h2>
