@@ -40,6 +40,7 @@ export default async function Footer({ lng }) {
         </a>
         <a
           href="https://technoplus.dev/"
+          target="_blank"
           className="flex items-center justify-start w-full sm:justify-center gap-2"
         >
           <FontAwesomeIcon icon={faGlobe} />
@@ -47,13 +48,19 @@ export default async function Footer({ lng }) {
         </a>
       </div>
       <div className="flex justify-center items-center gap-4">
-        <a href="https://www.facebook.com/technoplus.dev?mibextid=ZbWKwL">
+        <a
+          href="https://www.facebook.com/technoplus.dev?mibextid=ZbWKwL"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={faFacebookF} style={{ color: "#ffffff" }} />
         </a>
-        <a href="https://www.instagram.com/technoplus.dev?igsh=ZWh3MGlxZGFtbWE=">
+        <a
+          href="https://www.instagram.com/technoplus.dev?igsh=ZWh3MGlxZGFtbWE="
+          target="_blank"
+        >
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="https://www.linkedin.com/company/technopluss/">
+        <a href="https://www.linkedin.com/company/technopluss/" target="_blank">
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
       </div>
