@@ -20,17 +20,17 @@ export async function generateMetadata({ params: { lng } }) {
   return {
     openGraph: {
       title: "Techno Plus",
-      description: "Techno Plus Portfolio",
-      url: "https://technoplus.dev/",
-      siteName: "Techno Plus",
+      description: "The React Framework for the Web",
+      url: "https://nextjs.org",
+      siteName: "Next.js",
       images: [
         {
-          url: "https://back.portfolio.technoplus.dev/images/App_images/J5uAtQ2OnKgCCrcs7AwXfODuqz4d6Ess2mk1DkFF.png", // Must be an absolute URL
+          url: "https://nextjs.org/og.png", // Must be an absolute URL
           width: 800,
           height: 600,
         },
         {
-          url: "https://back.portfolio.technoplus.dev/images/App_images/J5uAtQ2OnKgCCrcs7AwXfODuqz4d6Ess2mk1DkFF.png", // Must be an absolute URL
+          url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
           width: 1800,
           height: 1600,
           alt: "My custom alt",
@@ -49,7 +49,7 @@ export async function generateMetadata({ params: { lng } }) {
     applicationName: "Techno Plus Portfolio",
     authors: [
       { name: "Techno Plus" },
-      { name: "Techno Plus", url: "https://technoplus.dev/" },
+      { name: "Techno Plus", url: "https://nextjs.org" },
     ],
     keywords: [
       "Mobile Application",

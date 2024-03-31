@@ -98,6 +98,24 @@ export default function Mobile({ lng }) {
                   <h2 className="text-3xl md:text-2xl font-semibold h-7 animate-pulse bg-[#66666730] w-1/2"></h2>
 
                   <p className="lg:text-2xl text-lg leading-8 h-5 animate-pulse bg-[#66666730] w-full"></p>
+                  {/* <Link href="ViewMobile"> */}
+                  {/* <button
+                    type="button"
+                    className="text-[#0090FF] bg-white px-3 py-1 cursor-pointer rounded-full font-semibold"
+                    onClick={() => {
+                      setImages(item.images);
+                      setPopup(true);
+                      document.body.style.overflow = "hidden";
+                      window.scrollTo({
+                        left: 0,
+                        top: 0,
+                        // behavior: "smooth",
+                      });
+                    }}
+                  >
+                    {t("view")}
+                  </button> */}
+                  {/* </Link> */}
                 </div>
               </div>
             </div>
@@ -167,6 +185,24 @@ export default function Mobile({ lng }) {
                       <p className="lg:text-2xl text-lg leading-8">
                         {item.description}
                       </p>
+                      {/* <Link href="ViewMobile"> */}
+                      {/* <button
+                    type="button"
+                    className="text-[#0090FF] bg-white px-3 py-1 cursor-pointer rounded-full font-semibold"
+                    onClick={() => {
+                      setImages(item.images);
+                      setPopup(true);
+                      document.body.style.overflow = "hidden";
+                      window.scrollTo({
+                        left: 0,
+                        top: 0,
+                        // behavior: "smooth",
+                      });
+                    }}
+                  >
+                    {t("view")}
+                  </button> */}
+                      {/* </Link> */}
                     </div>
                   </div>
                 </SwiperSlide>
@@ -194,6 +230,19 @@ export default function Mobile({ lng }) {
             className="w-[95%] h-[95%] translate-x-[16%]"
           />
         </div>
+        {/* {popup && (
+        <div className="z-10 overflow-hidden swiperMobile fixed left-0 top-0 h-screen w-full">
+          <div className="relative container mx-auto">
+            <SwiperComp images={images} />
+            <span
+              className="absolute right-1 bottom-4 -translate-x-full bg-white z-[10000000] px-3 py-2 rounded-md cursor-pointer select-none text-black"
+              onClick={() => setPopup(false)}
+            >
+              {t("back")}
+            </span>
+          </div>
+        </div>
+      )} */}
       </div>
     </div>
   );
