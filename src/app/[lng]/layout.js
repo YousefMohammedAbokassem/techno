@@ -26,13 +26,13 @@ export async function generateMetadata({ params: { lng } }) {
       images: [
         {
           url: "https://back.portfolio.technoplus.dev/images/App_images/J5uAtQ2OnKgCCrcs7AwXfODuqz4d6Ess2mk1DkFF.png", // Must be an absolute URL
-          width: 800,
-          height: 600,
+          width: 200,
+          height: 400,
         },
         {
           url: "https://back.portfolio.technoplus.dev/images/App_images/J5uAtQ2OnKgCCrcs7AwXfODuqz4d6Ess2mk1DkFF.png", // Must be an absolute URL
-          width: 1800,
-          height: 1600,
+          width: 400,
+          height: 600,
           alt: "My custom alt",
         },
       ],
