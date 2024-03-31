@@ -44,7 +44,7 @@ export async function generateMetadata({ params: { lng } }) {
       icon: "/logo.png",
     },
 
-    description: "The React Framework for the Web",
+    description: "Techno Plus Portfolio",
     generator: "Techno Plus",
     applicationName: "Techno Plus Portfolio",
     authors: [
